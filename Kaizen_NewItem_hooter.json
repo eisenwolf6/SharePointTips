@@ -1,0 +1,140 @@
+{
+  "elmType": "div",
+  "style": {
+      "display": "flex",
+      "flex-direction": "row",
+      "justify-content": "start",
+      "align-items": "flex-start"
+  },
+  "children": [
+      {
+          "elmType": "div",
+          "style": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "start",
+              "align-items": "flex-start",
+              "margin-right": "20px"
+          },
+          "children": [
+              {
+                  "elmType": "div",
+                  "style": {
+                      "font-weight": "bold",
+                      "font-size": "16px",
+                      "margin-bottom": "10px"
+                  },
+                  "txtContent": "◆システムメッセージ"
+              },
+              {
+                  "elmType": "div",
+                  "style": {
+                      "width": "60%",
+                      "background-color": "#f8f8f8",
+                      "padding": "10px",
+                      "border": "1px solid #ddd",
+                      "margin-bottom": "20px"
+                  },
+                  "txtContent": "ここにシステムメッセージを表示します。"
+              },
+              {
+                  "elmType": "div",
+                  "style": {
+                      "display": "flex",
+                      "flex-direction": "column",
+                      "justify-content": "start",
+                      "align-items": "flex-start"
+                  },
+                  "children": [
+                      {
+                          "elmType": "img",
+                          "style": {
+                              "width": "86%"
+                          },
+                          "attributes": {
+                              "src": "https://murataglobal.sharepoint.com/sites/msteams_5f9e00/Shared%20Documents/%E6%94%B9%E5%96%84%E5%A0%B1%E5%91%8A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/%E8%A9%95%E4%BE%A1%E5%9F%BA%E6%BA%96.jpg",
+                              "alt": "評価表"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "elmType": "div",
+          "style": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-around",
+              "align-items": "center",
+              "padding-top": "40px"
+          },
+          "children": [
+              {
+                  "elmType": "button",
+                  "txtContent": "アイテムを複製",
+                  "style": {
+                      "width": "150px",
+                      "height": "40px",
+                      "text-align": "center",
+                      "text-decoration": "none",
+                      "border-radius": "15px",
+                      "border": "none",
+                      "cursor": "pointer",
+                      "margin-bottom": "10px"
+                  },
+                  "attributes": {
+                      "class": "ms-fontColor-white ms-fontWeight-bold ms-bgColor-themePrimary ms-bgColor-themeTertiary--hover"
+                  },
+                  "customRowAction": {
+                      "action": "executeFlow",
+                      "actionParams": "{\"id\": \"[Power AutomateのフローID]\", \"itemId\": \"@currentField\"}"
+                  }
+              },
+              {
+                  "elmType": "button",
+                  "txtContent": "差戻し",
+                  "style": {
+                      "width": "150px",
+                      "height": "40px",
+                      "text-align": "center",
+                      "text-decoration": "none",
+                      "border-radius": "15px",
+                      "border": "none",
+                      "cursor": "pointer",
+                      "margin-bottom": "10px"
+                  },
+                  "attributes": {
+                      "class": "ms-fontColor-white ms-fontWeight-bold ms-bgColor-themePrimary ms-bgColor-themeTertiary--hover"
+                  },
+                  "customRowAction": {
+                      "action": "executeFlow",
+                      "actionParams": "{\"id\": \"d619d8d6-e92e-48a2-87df-b1d4efae5c02\"}"
+                  }
+              },
+              {
+                  "elmType": "a",
+                  "style": {
+                      "width": "150px",
+                      "height": "40px",
+                      "text-align": "center",
+                      "text-decoration": "none",
+                      "border-radius": "15px",
+                      "border": "none",
+                      "cursor": "pointer",
+                      "margin-bottom": "10px",
+                      "display": "flex",
+                      "align-items": "center",
+                      "justify-content": "center"
+                  },
+                  "txtContent": "マニュアル",
+                  "attributes": {
+                      "href": "https://murataglobal.sharepoint.com/sites/msteams_5f9e00/Shared%20Documents?newTargetListUrl=https%3A%2F%2Fmurataglobal%2Esharepoint%2Ecom%2Fsites%2Fmsteams%5F5f9e00%2FShared%20Documents&id=%2Fsites%2Fmsteams%5F5f9e00%2FShared%20Documents%2F%E6%94%B9%E5%96%84%E5%A0%B1%E5%91%8A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%2F%E6%94%B9%E5%96%84%E5%A0%B1%E5%91%8A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF%2Epdf&viewid=338c8c94%2D944c%2D4029%2Db6c7%2D1f27e19f1191&parent=%2Fsites%2Fmsteams%5F5f9e00%2FShared%20Documents%2F%E6%94%B9%E5%96%84%E5%A0%B1%E5%91%8A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0",
+                      "target": "_blank",
+                      "class": "ms-fontColor-white ms-fontWeight-bold ms-bgColor-themePrimary ms-bgColor-themeTertiary--hover"
+                  }
+              }
+          ]
+      }
+  ]
+}

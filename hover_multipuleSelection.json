@@ -1,0 +1,394 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "children": [
+        {
+            "elmType": "div",
+            "style":{
+                "padding": "5px 10px 5px 10px",
+                "border-radius": "10px",
+                "cursor": "pointer",
+                "display": "=if(length(@currentField) > 0 , '' ,'none')"
+              },
+              "attributes": {
+                "class":"ms-bgColor-themeLighter ms-fontColor-themeDarker ms-bgColor-themePrimary--hover ms-fontColor-white--hover ms-fontSize-14"
+              },
+              "customCardProps": {
+                "directionalHint": "rightCenter",
+                "isBeakVisible": true,
+                "openOnEvent": "hover",
+                "formatter": {
+                    "elmType": "div",
+                    "style": {
+                        "display":"=if(length(@currentField > 0, 'flex','none')",
+                        "flex-wrap":"wrap",
+                        "max-width":"500px",
+                        "max-height":"250px",
+                        "padding":"10px"
+                    },
+                 "children": [
+                    {
+                        "elmType": "div",
+                        "style":{
+                            "display":"flex",
+                            "flex-direction":"column",
+                            "width":"110px",
+                            "height":"20px",
+                            "text-align":"center",
+                            "padding":"5px"
+                        },
+                        "forEach": "UserSelection in @currentField",
+                        "children": [
+                            {
+                                "elmType": "div",
+                                "style":{
+                                    "display":"flex",
+                                    "justify-content":"center",
+                                    "align-items":"center",
+                                    "height":"65%",
+                                    "width":"100%"
+                                },
+                                "children": [
+                                    {
+                                        "elmType": "div",
+                                        "style": {
+                                            "box-sizing": "border-box",
+                                            "padding": "4px 8px 5px 8px",
+                                            "overflow": "hidden",
+                                            "text-overflow": "ellipsis",
+                                            "display": "flex",
+                                            "border-radius": "16px",
+                                            "height": "24px",
+                                            "align-items": "center",
+                                            "white-space": "nowrap",
+                                            "margin": "4px 4px 4px 4px"
+                                          },
+                                        "attributes": {
+                                          "class": {
+                                            "operator": ":",
+                                            "operands": [
+                                              {
+                                                "operator": "==",
+                                                "operands": [
+                                                  "[$UserSelection]",
+                                                  "業務改善"
+                                                ]
+                                              },
+                                              "sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont",
+                                              {
+                                                "operator": ":",
+                                                "operands": [
+                                                  {
+                                                    "operator": "==",
+                                                    "operands": [
+                                                      "[$UserSelection]",
+                                                      "不良率改善"
+                                                    ]
+                                                  },
+                                                  "sp-css-backgroundColor-BgMintGreen sp-field-fontSizeSmall sp-css-color-MintGreenFont",
+                                                  {
+                                                    "operator": ":",
+                                                    "operands": [
+                                                      {
+                                                        "operator": "==",
+                                                        "operands": [
+                                                          "[$UserSelection]",
+                                                          "新商品立ち上げ"
+                                                        ]
+                                                      },
+                                                      "sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont",
+                                                      {
+                                                        "operator": ":",
+                                                        "operands": [
+                                                          {
+                                                            "operator": "==",
+                                                            "operands": [
+                                                              "[$UserSelection]",
+                                                              "電力削減"
+                                                            ]
+                                                          },
+                                                          "sp-css-backgroundColor-BgCoral sp-field-fontSizeSmall sp-css-color-CoralFont",
+                                                          {
+                                                            "operator": ":",
+                                                            "operands": [
+                                                              {
+                                                                "operator": "==",
+                                                                "operands": [
+                                                                  "[$UserSelection]",
+                                                                  "教育関連"
+                                                                ]
+                                                              },
+                                                              "sp-css-backgroundColor-BgDustRose sp-field-fontSizeSmall sp-css-color-DustRoseFont",
+                                                              {
+                                                                "operator": ":",
+                                                                "operands": [
+                                                                  {
+                                                                    "operator": "==",
+                                                                    "operands": [
+                                                                      "[$UserSelection]",
+                                                                      "情報発信"
+                                                                    ]
+                                                                  },
+                                                                  "sp-css-backgroundColor-BgCyan sp-field-fontSizeSmall sp-css-color-CyanFont",
+                                                                  {
+                                                                    "operator": ":",
+                                                                    "operands": [
+                                                                      {
+                                                                        "operator": "==",
+                                                                        "operands": [
+                                                                          "[$UserSelection]",
+                                                                          "コストダウン"
+                                                                        ]
+                                                                      },
+                                                                      "sp-css-backgroundColor-BgPeach sp-field-fontSizeSmall sp-css-color-PeachFont",
+                                                                      {
+                                                                        "operator": ":",
+                                                                        "operands": [
+                                                                          {
+                                                                            "operator": "==",
+                                                                            "operands": [
+                                                                              "[$UserSelection]",
+                                                                              "見える化"
+                                                                            ]
+                                                                          },
+                                                                          "sp-css-backgroundColor-BgSage sp-field-fontSizeSmall sp-css-color-SageFont",
+                                                                          {
+                                                                            "operator": ":",
+                                                                            "operands": [
+                                                                              {
+                                                                                "operator": "==",
+                                                                                "operands": [
+                                                                                  "[$UserSelection]",
+                                                                                  "DX"
+                                                                                ]
+                                                                              },
+                                                                              "sp-css-backgroundColor-BgLightPurple sp-field-fontSizeSmall sp-css-color-LightPurpleFont",
+                                                                              {
+                                                                                "operator": ":",
+                                                                                "operands": [
+                                                                                  {
+                                                                                    "operator": "==",
+                                                                                    "operands": [
+                                                                                      "[$UserSelection]",
+                                                                                      "5S"
+                                                                                    ]
+                                                                                  },
+                                                                                  "sp-css-backgroundColor-BgViolet sp-field-fontSizeSmall sp-css-color-VioletFont",
+                                                                                  {
+                                                                                    "operator": ":",
+                                                                                    "operands": [
+                                                                                      {
+                                                                                        "operator": "==",
+                                                                                        "operands": [
+                                                                                          "[$UserSelection]",
+                                                                                          "安全衛生"
+                                                                                        ]
+                                                                                      },
+                                                                                      "sp-css-backgroundColor-BgLightBlue sp-field-fontSizeSmall sp-css-color-LightBlueFont",
+                                                                                      "sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary"
+                                                                                    ]
+                                                                                  }
+                                                                                ]
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "children": [
+                                          {
+                                            "elmType": "span",
+                                            "style": {
+                                              "overflow": "hidden",
+                                              "text-overflow": "ellipsis",
+                                              "padding": "0 3px"
+                                            },
+                                            "txtContent": "[$UserSelection]",
+                                            "attributes": {
+                                              "class": {
+                                                "operator": ":",
+                                                "operands": [
+                                                  {
+                                                    "operator": "==",
+                                                    "operands": [
+                                                      "[$UserSelection]",
+                                                      "業務改善"
+                                                    ]
+                                                  },
+                                                  "sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont",
+                                                  {
+                                                    "operator": ":",
+                                                    "operands": [
+                                                      {
+                                                        "operator": "==",
+                                                        "operands": [
+                                                          "[$UserSelection]",
+                                                          "不良率改善"
+                                                        ]
+                                                      },
+                                                      "sp-field-fontSizeSmall sp-css-color-MintGreenFont",
+                                                      {
+                                                        "operator": ":",
+                                                        "operands": [
+                                                          {
+                                                            "operator": "==",
+                                                            "operands": [
+                                                              "[$UserSelection]",
+                                                              "新商品立ち上げ"
+                                                            ]
+                                                          },
+                                                          "sp-field-fontSizeSmall sp-css-color-GoldFont",
+                                                          {
+                                                            "operator": ":",
+                                                            "operands": [
+                                                              {
+                                                                "operator": "==",
+                                                                "operands": [
+                                                                  "[$UserSelection]",
+                                                                  "電力削減"
+                                                                ]
+                                                              },
+                                                              "sp-field-fontSizeSmall sp-css-color-CoralFont",
+                                                              {
+                                                                "operator": ":",
+                                                                "operands": [
+                                                                  {
+                                                                    "operator": "==",
+                                                                    "operands": [
+                                                                      "[$UserSelection]",
+                                                                      "教育関連"
+                                                                    ]
+                                                                  },
+                                                                  "sp-field-fontSizeSmall sp-css-color-DustRoseFont",
+                                                                  {
+                                                                    "operator": ":",
+                                                                    "operands": [
+                                                                      {
+                                                                        "operator": "==",
+                                                                        "operands": [
+                                                                          "[$UserSelection]",
+                                                                          "情報発信"
+                                                                        ]
+                                                                      },
+                                                                      "sp-field-fontSizeSmall sp-css-color-CyanFont",
+                                                                      {
+                                                                        "operator": ":",
+                                                                        "operands": [
+                                                                          {
+                                                                            "operator": "==",
+                                                                            "operands": [
+                                                                              "[$UserSelection]",
+                                                                              "コストダウン"
+                                                                            ]
+                                                                          },
+                                                                          "sp-field-fontSizeSmall sp-css-color-PeachFont",
+                                                                          {
+                                                                            "operator": ":",
+                                                                            "operands": [
+                                                                              {
+                                                                                "operator": "==",
+                                                                                "operands": [
+                                                                                  "[$UserSelection]",
+                                                                                  "見える化"
+                                                                                ]
+                                                                              },
+                                                                              "sp-field-fontSizeSmall sp-css-color-SageFont",
+                                                                              {
+                                                                                "operator": ":",
+                                                                                "operands": [
+                                                                                  {
+                                                                                    "operator": "==",
+                                                                                    "operands": [
+                                                                                      "[$UserSelection]",
+                                                                                      "DX"
+                                                                                    ]
+                                                                                  },
+                                                                                  "sp-field-fontSizeSmall sp-css-color-LightPurpleFont",
+                                                                                  {
+                                                                                    "operator": ":",
+                                                                                    "operands": [
+                                                                                      {
+                                                                                        "operator": "==",
+                                                                                        "operands": [
+                                                                                          "[$UserSelection]",
+                                                                                          "5S"
+                                                                                        ]
+                                                                                      },
+                                                                                      "sp-field-fontSizeSmall sp-css-color-VioletFont",
+                                                                                      {
+                                                                                        "operator": ":",
+                                                                                        "operands": [
+                                                                                          {
+                                                                                            "operator": "==",
+                                                                                            "operands": [
+                                                                                              "[$UserSelection]",
+                                                                                              "安全衛生"
+                                                                                            ]
+                                                                                          },
+                                                                                          "sp-field-fontSizeSmall sp-css-color-LightBlueFont",
+                                                                                          ""
+                                                                                        ]
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                ]
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                 ]   
+                }
+              },
+              "children": [
+                {
+                    "elmType": "span",
+                    "style":{
+                        "margin-right":"10px"
+                    },
+                    "attributes": {
+                        "iconName":"Lightbulb"
+                    }
+                },
+        {
+          "elmType": "span",
+          "txtContent": "=length(@currentField)"
+        }
+      ]
+    }
+  ]
+}

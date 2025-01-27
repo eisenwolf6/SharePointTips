@@ -1,0 +1,27 @@
+{
+  "elmType": "div",
+  "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "justify-content": "center",
+      "min-height": "50px"
+  },
+  "children": [
+      {
+          "elmType": "div",
+          "txtContent": "=if ([$Title] == '', '新しい改善報告を入力してください。', if ([$draft] == true, '【下書き】' +   [$Title], [$Title] )",
+          "style": {
+              "background-color": "#bbe2f1",
+              "border-left": "20px solid",
+              "border-color": "#0068b7",
+              "width": "100%",
+              "height": "40px",
+              "line-height": "40px",
+              "padding-left": "30px"
+          },
+          "attributes": {
+              "class": "ms-fontColor-neutralPrimary ms-fontSize-24 ms-fontWeight-bold"
+          }
+      }
+  ]
+}

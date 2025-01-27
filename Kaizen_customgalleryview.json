@@ -1,0 +1,274 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "commandBarProps": {
+    "commands": [
+      {
+        "key": "new",
+        "text": "新しい改善報告",
+        "iconName": "FavoriteStarFill",
+        "primary": true
+      },
+      {
+        "key": "editInGridView",
+        "hide": true
+      },
+      {
+        "key": "share",
+        "hide": true
+      },
+      {
+        "key": "export",
+        "hide": true
+      },
+      {
+        "key": "automate",
+        "hide": true
+      },
+      {
+        "key": "integrate",
+        "hide": true
+      },
+      {
+        "key": "properties",
+        "hide": true
+      },
+      {
+        "key": "manageAlert",
+        "hide": true
+      },
+      {
+        "key": "alertMe",
+        "hide": true
+      },
+      {
+        "key": "manageForms",
+        "hide": true
+      }
+    ]
+  },
+  "height": 300,
+  "width": 250,
+  "hideSelection": false,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-card-container"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "sp-card-defaultClickButton"
+        },
+        "customRowAction": {
+          "action": "defaultClick"
+        }
+      },
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-bgColor-neutralLighterAlt sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontColor-tealLight sp-card-content sp-card-highlightedContent",
+                  "role": "heading",
+                  "aria-level": "3"
+                },
+                "txtContent": "=if ([$Title] == '', '?', if([$draft] == false,[$Title],'【下書き】' + [$Title]))"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-label"
+                },
+                "txtContent": "[!PJTleader.DisplayName]"
+              },
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "ms-fontColor-neutralPrimary sp-card-userContent ",
+                  "title": "[$PJTleader.title]"
+                },
+                "children": [
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$PJTleader]) == 0, '?', '')"
+                  },
+                  {
+                    "forEach": "personIterator in [$PJTleader]",
+                    "elmType": "p",
+                    "defaultHoverField": "[$personIterator]",
+                    "style": {
+                      "display": "=if(loopIndex('personIterator') >= 1, 'none', '')"
+                    },
+                    "txtContent": "[$personIterator.title]"
+                  },
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$PJTleader]) > 1, ',  +' + (length([$PJTleader]) - 1) , '')"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-label"
+                },
+                "txtContent": "[!checker.DisplayName]"
+              },
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "ms-fontColor-neutralPrimary sp-card-userContent ",
+                  "title": "[$checker.title]"
+                },
+                "children": [
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$checker]) == 0, '?', '')"
+                  },
+                  {
+                    "forEach": "personIterator in [$checker]",
+                    "elmType": "p",
+                    "defaultHoverField": "[$personIterator]",
+                    "style": {
+                      "display": "=if(loopIndex('personIterator') >= 1, 'none', '')"
+                    },
+                    "txtContent": "[$personIterator.title]"
+                  },
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$checker]) > 1, ',  +' + (length([$checker]) - 1) , '')"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$rating]",
+                  "class": "=if([$rating] == '―','ms-fontColor-neutralPrimary sp-card-content',if([$rating]== '6級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgCyan sp-card-content',if([$rating]== '5級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgSage sp-card-content',if([$rating]== '4級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgMintGreen sp-card-content',if([$rating]== '3級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgGold sp-card-content',if([$rating]== '2級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgPeach sp-card-content',if([$rating]=='1級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgCoral sp-card-content','ms-fontColor-neutralPrimary sp-card-content'))))))"
+                },
+                "txtContent": "=if ([$rating] == '', '一次格付け：?', '一次格付け：' + [$rating] )"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-label"
+                },
+                "txtContent": "[!Approver.DisplayName]"
+              },
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "ms-fontColor-neutralPrimary sp-card-userContent ",
+                  "title": "[$Approver.title]"
+                },
+                "children": [
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$Approver]) == 0, '?', '')"
+                  },
+                  {
+                    "forEach": "personIterator in [$Approver]",
+                    "elmType": "p",
+                    "defaultHoverField": "[$personIterator]",
+                    "style": {
+                      "display": "=if(loopIndex('personIterator') >= 1, 'none', '')"
+                    },
+                    "txtContent": "[$personIterator.title]"
+                  },
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if(length([$Approver]) > 1, ',  +' + (length([$Approver]) - 1) , '')"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$FinalRating]",
+                  "class": "=if([$FinalRating] == '―','ms-fontColor-neutralPrimary sp-card-content',if([$FinalRating]== '6級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgCyan sp-card-content',if([$FinalRating]== '5級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgSage sp-card-content',if([$FinalRating]== '4級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgMintGreen sp-card-content',if([$FinalRating]== '3級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgGold sp-card-content',if([$FinalRating]== '2級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgPeach sp-card-content',if([$FinalRating]=='1級','ms-fontColor-neutralPrimary sp-css-backgroundColor-BgCoral sp-card-content','ms-fontColor-neutralPrimary sp-card-content'))))))"
+                },
+                "txtContent": "=if ([$FinalRating] == '', '最終格付け：?', '最終格付け：' + [$FinalRating])"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-lastTextColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-label"
+                },
+                "txtContent": "[!Modified.DisplayName]"
+              },
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "=if ([$Modified.displayValue] == '', '?', [$Modified.displayValue])",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content "
+                },
+                "txtContent": "=if ([$Modified.displayValue] == '', '?', [$Modified.displayValue])"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

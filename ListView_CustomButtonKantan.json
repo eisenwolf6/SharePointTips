@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "回覧",
+  "style": {
+    "width": "80%",
+    "hegint": "70%",
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+    "border-radius": "15px",
+    "border": "none",
+    "cursor": "pointer",
+    "margin-bottom": "10px"
+  },
+  "attributes": {
+    "class": "ms-fontColor-white ms-fontWeight-bold ms-bgColor-themePrimary ms-bgColor-themeTertiary--hover"
+  },
+  "customRowAction": {
+    "action": "executeFlow",
+    "actionParams": "{\"id\": \"d619d8d6-e92e-48a2-87df-b1d4efae5c02\"}"
+  }
+}

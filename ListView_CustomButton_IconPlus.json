@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "children": [
+    {
+      "elmType": "div",
+      "style": {
+        "flex-direction": "row"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "80px",
+            "height": "40px",
+            "border-radius": "5px",
+            "cursor": "pointer",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "space-evenly",
+            "margin": "5px"
+          },
+          "attributes": {
+            "class": "ms-bgColor-themePrimary ms-bgColor-themeDark--hover ms-fontColor-white ms-fontSize-12 ms-fontWeight-bold"
+          },
+          "customRowAction": {
+            "action": "executeFlow",
+            "actionParams": "{\"id\": \"d619d8d6-e92e-48a2-87df-b1d4efae5c02\"}"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "style":{
+                "font-size": "15px",
+                "margin-right": "5px"
+              },
+              "attributes": {
+                "iconName":"UserSync"
+              }
+            },
+            {
+              "elmType": "span",
+              "txtContent": "再送信"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
