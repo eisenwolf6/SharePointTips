@@ -1,6 +1,6 @@
 # プロジェクト名：SharePointTips
 
-# 初めてのプロジェクト
+## 初めてのプロジェクトを作成し、リポジトリ連携する
 - git initでローカルリポジトリを作る
 - git addでステージングエリアに登録
 - git commitでGitディレクトリに登録
@@ -16,3 +16,6 @@
 - git push origin main（今度は成功）
 - git log origin/main..mainでリモートとローカルの差分が表示される
   - ..は範囲指定演算子で後ろのmainがローカルリポジトリのmainブランチ
+
+- Warning: Permanently added '[lb.a1x5-gitlab-nonprod.macp.murata.com]:2224' (ED25519) to the list of known hosts.
+  - これ毎回でるけど無視でいいから
