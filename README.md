@@ -19,4 +19,4 @@
   - ..は範囲指定演算子で後ろのmainがローカルリポジトリのmainブランチ
 
 - Warning: Permanently added '[lb.a1x5-gitlab-nonprod.macp.murata.com]:2224' (ED25519) to the list of known hosts.
-  - これ毎回でるけど無視でいいから、消せるのかな
+  - これ毎回でるけど無視でいいから
