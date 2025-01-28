@@ -5,8 +5,9 @@
 - git addでステージングエリアに登録
 - git commitでGitディレクトリに登録
 - gitLabでプロジェクトを作成
-- git remote add origin ssh://GitLabSSH/TM03209/SharePointTips.gitでローカルリポジトリとリモートリポジトリを連携
-  - git remote rm origin　リモートリポジトリをローカルリポジトリから削除（よく使いそう）
+- git remote add origin ssh://GitLabSSH/japan/japan-tm1016/SharePointTips.gitでローカルリポジトリとリモートリポジトリを連携
+  - git remote rm origin　リモートリポジトリをローカルリポジトリから削除（よく使う。別のプロジェクトで作業する時）
+  - git remote -v（リモートリポジトリの割り当て状況確認）
 - git push origin main(origin：関連付けたリモートリポジトリの名称 main：リモートリポジトリのブランチ名)
   - 失敗する。リモートリポジトリにREADME.mdがあり、ローカルと異なるため
 - git fetch originでリモートリポジトリの最新の変更を取得（まだワークツリーには反映されない！）
