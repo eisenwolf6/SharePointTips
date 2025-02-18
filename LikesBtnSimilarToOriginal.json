@@ -23,13 +23,22 @@
         {
           "elmType": "span",
           "attributes": {
+            "class":"ms-fontSize-mPlus",
             "iconName": "=if(indexOf([$LikedBy.email], @me) > -1 , 'LikeSolid', 'Like')"
-          }
+          },
+          "style": {
+            "vertical-align": "middle"
+          }          
         },
         {
           "elmType": "span",
+          "attributes": {
+            "class": "ms-fontSize-mPlus heroTextWithHeroCommandsWrapped_f4827230"
+          },
           "style": {
-            "margin-left": "5px"
+            "margin-left": "10px",
+            "vertical-align": "middle",
+            "font-weight":"normal"
           },
           "txtContent": "=[$LikesCount] + ' 件のいいね！'"
         }
